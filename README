@@ -1,0 +1,7 @@
+how to change xml to hash:
+
+xml = Nokogiri::XML(open('path_to_file'))
+xml = xml.to_html
+hash = Hash.from_xml(xml)
+
+Description : So you can call hash['outer_attr']['inner_attr']
